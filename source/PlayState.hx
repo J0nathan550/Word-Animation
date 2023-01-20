@@ -13,7 +13,9 @@ class PlayState extends FlxState
 	var timeAnimation:Float = 0.2;
 	var textAnimation:String = "";
 	var index:Int = 0;
-	var nikitaAnimation:Array<String> = ["N", "I", "K", "I", "T", "A", " ", "G", "A", "Y", "."];
+	var nikitaAnimation:Array<String> = [
+		"U", "N", "I", "T", "E", "D", " ", "P", "R", "O", "G", "R", "A", "M", "M", "I", "N", "G"
+	];
 	var nikitaTexts:List<flixel.text.FlxText> = new List<flixel.text.FlxText>();
 	var text:FlxText = new flixel.text.FlxText(0, 0, 0, "", 64);
 	var fadeOutAnimation:Int = 255;
@@ -42,7 +44,7 @@ class PlayState extends FlxState
 			{
 				if (fadeOutAnimation <= 0)
 				{
-					if(superFinalBool)
+					if (superFinalBool)
 					{
 						PlayAppearSound();
 						System.exit(0);
@@ -64,7 +66,7 @@ class PlayState extends FlxState
 							remove(i);
 						}
 						nikitaTexts.clear();
-						text.text = "NIKITA GAY.";
+						text.text = "UNITED PROGRAMMING";
 						text.color = text.color.setRGB(255, 0, 0);
 						text.screenCenter();
 						PlayTypeSound();
@@ -77,7 +79,7 @@ class PlayState extends FlxState
 						var r:Int = random.int(0, 255),
 							g:Int = random.int(0, 255),
 							b:Int = random.int(0, 255);
-						var textNikita = new flixel.text.FlxText(random.int(0, 1920), random.int(0, 1080), 0, "NIKITA GAY.", 64);
+						var textNikita = new flixel.text.FlxText(random.int(0, 1920), random.int(0, 1080), 0, "UNITED PROGRAMMING", 64);
 						textNikita.color = textNikita.color.setRGB(r, g, b);
 						add(textNikita);
 						nikitaTexts.add(textNikita);
@@ -95,7 +97,7 @@ class PlayState extends FlxState
 						var r:Int = random.int(0, 255),
 							g:Int = random.int(0, 255),
 							b:Int = random.int(0, 255);
-						var textNikita = new flixel.text.FlxText(0, 0, 0, "NIKITA GAY.", 64);
+						var textNikita = new flixel.text.FlxText(0, 0, 0, "UNITED PROGRAMMING", 64);
 						textNikita.color = textNikita.color.setRGB(r, g, b);
 						textNikita.screenCenter();
 						add(textNikita);
@@ -138,5 +140,6 @@ class PlayState extends FlxState
 		var appearSound:FlxSound = new FlxSound();
 		appearSound = FlxG.sound.load(AssetPaths.step__wav);
 		appearSound.play();
+		appearSound = null;
 	}
 }
