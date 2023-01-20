@@ -4,7 +4,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Nikita Gay" file="Nikita Gay" main="Main" version="0.0.1" company="J0nathan550" />
+	<app title="Word Animation" file="Word Animation" main="Main" version="0.0.1" company="J0nathan550" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
